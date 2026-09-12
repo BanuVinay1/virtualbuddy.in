@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banu Vinay – Fabric Data Engineer</title>
+<meta name="description" content="Banu Vinay is a Microsoft Fabric data engineer in Bengaluru who builds lakehouses, pipelines and governed data platforms on Fabric and Azure, with Purview for governance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F4F6F3;
+    --paper-deep: #E8ECE6;
+    --ink: #14322B;
+    --ink-soft: #3F5C54;
+    --mist: #8B9C96;
+    --rule: #CFD8D3;
+    --brass: #B07A1E;
+    --brass-soft: #E9D7B3;
+    --bronze: #9C6B3F;
+    --silver: #8E9AA3;
+    --gold: #C99A2E;
+    --measure: 68ch;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--brass); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+  h1, h2, h3 { font-family: "IBM Plex Serif", Georgia, serif; font-weight: 500; line-height: 1.15; margin: 0; }
+  p { margin: 0 0 1em; max-width: var(--measure); }
+
+  .wrap { width: min(1040px, 92vw); margin: 0 auto; }
+
+  /* Header */
+  header {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    padding: 28px 0 0;
+  }
+  .brand { font-family: "IBM Plex Serif", serif; font-size: 20px; text-decoration: none; }
+  .brand span { color: var(--mist); }
+  nav a { text-decoration: none; margin-left: 22px; font-size: 15px; color: var(--ink-soft); }
+  nav a:hover { color: var(--brass); }
+
+  /* Hero */
+  .hero { padding: 84px 0 56px; }
+  .hero .kicker { color: var(--ink-soft); font-size: 17px; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(34px, 5.2vw, 58px); max-width: 20ch; letter-spacing: -0.01em; }
+  .hero .lede { font-size: 19px; color: var(--ink-soft); margin-top: 22px; }
+  .cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+  .btn {
+    display: inline-block; padding: 11px 18px; border-radius: 3px; text-decoration: none;
+    font-size: 15px; font-weight: 500; border: 1px solid var(--ink);
+  }
+  .btn.primary { background: var(--ink); color: var(--paper); }
+  .btn.primary:hover { background: var(--brass); border-color: var(--brass); color: #fff; }
+  .btn.ghost:hover { border-color: var(--brass); color: var(--brass); }
+
+  /* Pipeline strip */
+  .pipeline { margin: 64px 0 0; }
+  .pipeline svg { width: 100%; height: auto; display: block; }
+  .pipeline figcaption { font-size: 14px; color: var(--mist); margin-top: 12px; max-width: var(--measure); }
+
+  /* Sections */
+  section { padding: 72px 0; border-top: 1px solid var(--rule); }
+  .section-head { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; }
+  .section-head h2 { font-size: 28px; }
+  .section-head .intro { color: var(--ink-soft); }
+  @media (max-width: 720px) { .section-head { grid-template-columns: 1fr; gap: 12px; } }
+
+  /* Work */
+  .project { display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 34px 0; border-top: 1px solid var(--rule); }
+  .project:first-of-type { margin-top: 40px; }
+  .project .meta { color: var(--mist); font-size: 15px; line-height: 1.5; }
+  .project .meta .stack { color: var(--ink-soft); display: block; margin-top: 6px; }
+  .project h3 { font-size: 22px; margin-bottom: 10px; }
+  .project dl { display: grid; grid-template-columns: 90px 1fr; gap: 6px 16px; margin: 0; max-width: var(--measure); }
+  .project dt { color: var(--mist); font-size: 15px; }
+  .project dd { margin: 0; }
+  .project .outcome { color: var(--brass); font-weight: 500; }
+  @media (max-width: 720px) { .project { grid-template-columns: 1fr; gap: 12px; } }
+  .placeholder { outline: 1px dashed var(--brass); outline-offset: 12px; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 40px 32px; margin-top: 40px; }
+  .skills h3 { font-size: 19px; margin-bottom: 12px; }
+  .skills ul { list-style: none; padding: 0; margin: 0; }
+  .skills li { padding: 5px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
+  .skills li.next { color: var(--ink-soft); }
+  .skills li.next::before { content: "learning · "; color: var(--brass); font-size: 13px; }
+
+  /* Certs */
+  .certs { list-style: none; padding: 0; margin: 40px 0 0; max-width: 720px; }
+  .certs li { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  .certs .code { color: var(--brass); font-weight: 500; margin-right: 10px; }
+  .certs .date { color: var(--mist); font-size: 15px; white-space: nowrap; }
+  @media (max-width: 520px) { .certs li { grid-template-columns: 1fr; gap: 2px; } }
+
+  /* About / contact */
+  .about p { font-size: 18px; }
+  .contact-list { list-style: none; padding: 0; margin: 28px 0 0; font-size: 18px; }
+  .contact-list li { padding: 6px 0; }
+
+  footer { padding: 40px 0 56px; color: var(--mist); font-size: 14px; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a class="brand" href="#top">Banu Vinay <span>/ virtualbuddy.in</span></a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#certs">Certifications</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <p class="kicker">Fabric Data Engineer, Bengaluru</p>
+      <h1>I build lakehouses and pipelines on Microsoft Fabric, and the governance that keeps them trustworthy.</h1>
+      <p class="lede">Data analyst by origin, data engineer by practice. I know what the report needs before I design the table that feeds it, and I'm bringing Microsoft Purview into every platform I build so the data stays cataloged, classified and traceable.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+
+      <figure class="pipeline">
+        <svg viewBox="0 0 1000 220" role="img" aria-labelledby="pipeTitle" xmlns="http://www.w3.org/2000/svg">
+          <title id="pipeTitle">A medallion data pipeline: sources flow into bronze, silver and gold lakehouse layers, then into Power BI, with Purview governing every stage.</title>
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#8B9C96"/>
+            </marker>
+          </defs>
+          <!-- Purview bracket -->
+          <path d="M40,30 L40,16 L960,16 L960,30" fill="none" stroke="#B07A1E" stroke-width="1.5"/>
+          <text x="500" y="12" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#B07A1E">Microsoft Purview: catalog, lineage, classification, sensitivity labels</text>
+
+          <!-- Sources -->
+          <g font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#3F5C54">
+            <rect x="40" y="70" width="150" height="34" rx="3" fill="none" stroke="#CFD8D3"/>
+            <text x="115" y="92" text-anchor="middle">SQL / SaaS APIs</text>
+            <rect x="40" y="114" width="150" height="34" rx="3" fill="none" stroke="#CFD8D3"/>
+            <text x="115" y="136" text-anchor="middle">LMS &amp; CRM exports</text>
+            <rect x="40" y="158" width="150" height="34" rx="3" fill="none" stroke="#CFD8D3"/>
+            <text x="115" y="180" text-anchor="middle">Files &amp; events</text>
+          </g>
+
+          <!-- Sources to bronze -->
+          <path d="M190,87 C240,87 240,131 280,131" fill="none" stroke="#8B9C96" stroke-width="1.5"/>
+          <path d="M190,131 L280,131" fill="none" stroke="#8B9C96" stroke-width="1.5"/>
+          <path d="M190,175 C240,175 240,131 280,131" fill="none" stroke="#8B9C96" stroke-width="1.5" marker-end="url(#arr)"/>
+
+          <!-- Medallions -->
+          <g font-family="IBM Plex Serif, serif" font-size="15" text-anchor="middle">
+            <circle cx="340" cy="131" r="46" fill="#9C6B3F" opacity="0.92"/>
+            <text x="340" y="127" fill="#F4F6F3">Bronze</text>
+            <text x="340" y="146" fill="#F4F6F3" font-family="IBM Plex Sans, sans-serif" font-size="11">raw, as landed</text>
+
+            <path d="M386,131 L448,131" stroke="#8B9C96" stroke-width="1.5" marker-end="url(#arr)"/>
+
+            <circle cx="500" cy="131" r="46" fill="#8E9AA3"/>
+            <text x="500" y="127" fill="#14322B">Silver</text>
+            <text x="500" y="146" fill="#14322B" font-family="IBM Plex Sans, sans-serif" font-size="11">cleaned, conformed</text>
+
+            <path d="M546,131 L608,131" stroke="#8B9C96" stroke-width="1.5" marker-end="url(#arr)"/>
+
+            <circle cx="660" cy="131" r="46" fill="#C99A2E"/>
+            <text x="660" y="127" fill="#14322B">Gold</text>
+            <text x="660" y="146" fill="#14322B" font-family="IBM Plex Sans, sans-serif" font-size="11">modeled for BI</text>
+          </g>
+
+          <!-- Gold to Power BI -->
+          <path d="M706,131 L780,131" stroke="#8B9C96" stroke-width="1.5" marker-end="url(#arr)"/>
+          <g font-family="IBM Plex Sans, sans-serif" font-size="14">
+            <rect x="790" y="96" width="170" height="70" rx="3" fill="#14322B"/>
+            <text x="875" y="125" text-anchor="middle" fill="#F4F6F3" font-family="IBM Plex Serif, serif" font-size="16">Power BI</text>
+            <text x="875" y="146" text-anchor="middle" fill="#CFD8D3" font-size="12">semantic model &amp; reports</text>
+          </g>
+
+          <!-- Fabric base label -->
+          <path d="M280,205 L720,205" stroke="#CFD8D3" stroke-width="1"/>
+          <text x="500" y="196" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#8B9C96">Fabric Lakehouse: Pipelines, Dataflows Gen2, Spark notebooks, Delta tables</text>
+        </svg>
+        <figcaption>The shape most of my work takes. Sources land in bronze untouched, get cleaned and conformed in silver, and are modeled in gold for reporting. Purview sits across all of it.</figcaption>
+      </figure>
+    </div>
+
+    <section id="work">
+      <div class="section-head">
+        <h2>Work</h2>
+        <p class="intro">Selected projects. Each one lists the problem, what I built, and what changed. More detail on request.</p>
+      </div>
+
+      <!-- PLACEHOLDER: replace the three projects below with real ones. Delete class="placeholder" when done. -->
+      <article class="project placeholder">
+        <div class="meta">2025 · Client project<span class="stack">Fabric · Pipelines · Power BI</span></div>
+        <div>
+          <h3>Project title goes here</h3>
+          <dl>
+            <dt>Problem</dt><dd>One or two sentences on what was broken or missing.</dd>
+            <dt>Built</dt><dd>What you designed and shipped, in plain terms.</dd>
+            <dt>Outcome</dt><dd class="outcome">A number: hours saved, rows processed, users served, refresh time cut.</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project placeholder">
+        <div class="meta">2025 · Client project<span class="stack">Azure Data Factory · SQL · Power BI</span></div>
+        <div>
+          <h3>Project title goes here</h3>
+          <dl>
+            <dt>Problem</dt><dd>One or two sentences on what was broken or missing.</dd>
+            <dt>Built</dt><dd>What you designed and shipped, in plain terms.</dd>
+            <dt>Outcome</dt><dd class="outcome">A number.</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project placeholder">
+        <div class="meta">2026 · Personal build<span class="stack">Fabric Lakehouse · Purview</span></div>
+        <div>
+          <h3>Governed lakehouse on Fabric with Purview</h3>
+          <dl>
+            <dt>Problem</dt><dd>Most Fabric demos stop at the gold layer. I wanted a platform where lineage, classification and sensitivity labels are part of the build, not an afterthought.</dd>
+            <dt>Built</dt><dd>Medallion lakehouse on public data, scanned and cataloged in Purview, with sensitivity labels flowing through to the Power BI semantic model.</dd>
+            <dt>Outcome</dt><dd class="outcome">Write-up and repo coming soon.</dd>
+          </dl>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p class="intro">Grouped by where they sit in the platform. Items marked as learning are in progress and honest about it.</p>
+      </div>
+      <div class="skills">
+        <div>
+          <h3>Microsoft Fabric</h3>
+          <ul>
+            <li>Lakehouse and Delta tables</li>
+            <li>Data pipelines</li>
+            <li>Dataflows Gen2</li>
+            <li>Spark notebooks (PySpark)</li>
+            <li>Warehouse and T-SQL</li>
+            <li>Medallion architecture</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Azure</h3>
+          <ul>
+            <li>Data Factory</li>
+            <li>Azure SQL and Storage</li>
+            <li>Virtual machines and networking</li>
+            <li>Resource setup and cost control</li>
+            <li>Entra ID and access management</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Analytics</h3>
+          <ul>
+            <li>Power BI and DAX</li>
+            <li>Semantic model design</li>
+            <li>SQL</li>
+            <li>Python for data work</li>
+            <li>LMS and CRM analytics</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Governance and security</h3>
+          <ul>
+            <li>Microsoft Purview data catalog</li>
+            <li class="next">Lineage and classification</li>
+            <li class="next">Sensitivity labels and DLP</li>
+            <li>Information protection (SC-401)</li>
+            <li>Fabric workspace security</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="certs">
+      <div class="section-head">
+        <h2>Certifications</h2>
+        <p class="intro">All current and verifiable on <a href="https://www.linkedin.com/in/banu-vinay-a59703123/">LinkedIn</a>.</p>
+      </div>
+      <ul class="certs">
+        <li><span><span class="code">DP-700</span>Microsoft Certified: Fabric Data Engineer Associate</span><span class="date">July 2026</span></li>
+        <li><span><span class="code">SC-401</span>Microsoft Certified: Information Security Administrator Associate</span><span class="date">August 2025</span></li>
+        <li><span><span class="code">AZ-104</span>Microsoft Certified: Azure Administrator Associate</span><span class="date">January 2025</span></li>
+        <li><span><span class="code">AZ-900</span>Microsoft Certified: Azure Fundamentals</span><span class="date">November 2023</span></li>
+      </ul>
+    </section>
+
+    <section id="about" class="about">
+      <div class="section-head">
+        <h2>About</h2>
+        <div>
+          <p>I started as a data analyst, building reports and answering questions for business teams. Over time the harder problems moved upstream: the data was late, duplicated, or impossible to trust, so I moved upstream with it and became the person who builds the pipelines.</p>
+          <p>Today I work on Microsoft Fabric and Azure, and I'm deliberately adding Purview to that so I can own both halves of the job: getting data to people, and making sure it's the right data. I've delivered 50+ projects for small and mid-size businesses, mostly on Upwork, alongside my engineering work.</p>
+          <p>I'm based in Bengaluru and open to full-time roles and selected freelance work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <div>
+          <p>The fastest way to reach me is email. I reply within a working day.</p>
+          <ul class="contact-list">
+            <li><a href="mailto:banu@virtualbuddy.in">banu@virtualbuddy.in</a></li>
+            <li><a href="https://www.linkedin.com/in/banu-vinay-a59703123/">LinkedIn</a></li>
+            <li><a href="https://github.com/BanuVinay1">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Banu Vinay · virtualbuddy.in · Built by hand, hosted on GitHub Pages.
+  </footer>
+
+</div>
+</body>
+</html>
