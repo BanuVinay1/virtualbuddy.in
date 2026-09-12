@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Banu Vinay – Fabric Data Engineer</title>
-<meta name="description" content="Banu Vinay is a Microsoft Fabric data engineer in Bengaluru who builds lakehouses, pipelines and governed data platforms on Fabric and Azure, with Purview for governance.">
+<title>Banu Vinay – Fabric Data Engineer & Trainer</title>
+<meta name="description" content="Banu Vinay is a Microsoft Fabric data engineer and trainer in Bengaluru. End-to-end Fabric platforms: metadata-driven ingestion, medallion lakehouses, star-schema warehouses, semantic models and Power BI, with Purview for governance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -82,6 +82,7 @@
   /* Work */
   .project { display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 34px 0; border-top: 1px solid var(--rule); }
   .project:first-of-type { margin-top: 40px; }
+  .project dd a { color: var(--ink); }
   .project .meta { color: var(--mist); font-size: 15px; line-height: 1.5; }
   .project .meta .stack { color: var(--ink-soft); display: block; margin-top: 6px; }
   .project h3 { font-size: 22px; margin-bottom: 10px; }
@@ -90,15 +91,12 @@
   .project dd { margin: 0; }
   .project .outcome { color: var(--brass); font-weight: 500; }
   @media (max-width: 720px) { .project { grid-template-columns: 1fr; gap: 12px; } }
-  .placeholder { outline: 1px dashed var(--brass); outline-offset: 12px; }
 
   /* Skills */
   .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 40px 32px; margin-top: 40px; }
   .skills h3 { font-size: 19px; margin-bottom: 12px; }
   .skills ul { list-style: none; padding: 0; margin: 0; }
   .skills li { padding: 5px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
-  .skills li.next { color: var(--ink-soft); }
-  .skills li.next::before { content: "learning · "; color: var(--brass); font-size: 13px; }
 
   /* Certs */
   .certs { list-style: none; padding: 0; margin: 40px 0 0; max-width: 720px; }
@@ -131,9 +129,9 @@
 
   <main id="top">
     <div class="hero">
-      <p class="kicker">Fabric Data Engineer, Bengaluru</p>
+      <p class="kicker">Fabric Data Engineer &amp; Trainer, Bengaluru</p>
       <h1>I build lakehouses and pipelines on Microsoft Fabric, and the governance that keeps them trustworthy.</h1>
-      <p class="lede">Data analyst by origin, data engineer by practice. I know what the report needs before I design the table that feeds it, and I'm bringing Microsoft Purview into every platform I build so the data stays cataloged, classified and traceable.</p>
+      <p class="lede">Data analyst by origin, data engineer by practice. I build end-to-end Fabric platforms: metadata-driven ingestion, medallion lakehouses, star-schema warehouses, semantic models and the Power BI on top. I train the teams who inherit them, and I'm bringing Microsoft Purview into every build so the data stays cataloged, classified and traceable.</p>
       <div class="cta">
         <a class="btn primary" href="#work">See my work</a>
         <a class="btn ghost" href="#contact">Get in touch</a>
@@ -154,11 +152,11 @@
           <!-- Sources -->
           <g font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#3F5C54">
             <rect x="40" y="70" width="150" height="34" rx="3" fill="none" stroke="#CFD8D3"/>
-            <text x="115" y="92" text-anchor="middle">SQL / SaaS APIs</text>
+            <text x="115" y="92" text-anchor="middle">ERP &amp; CRM databases</text>
             <rect x="40" y="114" width="150" height="34" rx="3" fill="none" stroke="#CFD8D3"/>
-            <text x="115" y="136" text-anchor="middle">LMS &amp; CRM exports</text>
+            <text x="115" y="136" text-anchor="middle">SaaS APIs &amp; Delta Sharing</text>
             <rect x="40" y="158" width="150" height="34" rx="3" fill="none" stroke="#CFD8D3"/>
-            <text x="115" y="180" text-anchor="middle">Files &amp; events</text>
+            <text x="115" y="180" text-anchor="middle">SharePoint, files, events</text>
           </g>
 
           <!-- Sources to bronze -->
@@ -207,39 +205,63 @@
         <p class="intro">Selected projects. Each one lists the problem, what I built, and what changed. More detail on request.</p>
       </div>
 
-      <!-- PLACEHOLDER: replace the three projects below with real ones. Delete class="placeholder" when done. -->
-      <article class="project placeholder">
-        <div class="meta">2025 · Client project<span class="stack">Fabric · Pipelines · Power BI</span></div>
+      <article class="project">
+        <div class="meta">2026 – present · ORR Protection, USA<span class="stack">Fabric F16 · Lakehouse · Warehouse · Pipelines · PySpark · T-SQL · Power BI</span></div>
         <div>
-          <h3>Project title goes here</h3>
+          <h3>Enterprise data platform on Microsoft Fabric, built from zero</h3>
           <dl>
-            <dt>Problem</dt><dd>One or two sentences on what was broken or missing.</dd>
-            <dt>Built</dt><dd>What you designed and shipped, in plain terms.</dd>
-            <dt>Outcome</dt><dd class="outcome">A number: hours saved, rows processed, users served, refresh time cut.</dd>
+            <dt>Problem</dt><dd>A fire-protection company with data spread across an Odoo ERP, Salesforce, Procore, InspectPoint, ADP and SharePoint, an IT team new to Fabric, and reporting that lived in one-off dataflows nobody could maintain.</dd>
+            <dt>Built</dt><dd>Sole data engineer embedded with IT leadership. Config-driven, metadata-driven ingestion into a medallion lakehouse (six source systems; PostgreSQL read replicas, the Salesforce connector, Delta Sharing, REST APIs and file drops), incremental loads with watermarks and MERGE patterns, a gold-layer star schema in a Fabric Warehouse refreshed by stored procedures, DirectQuery and Direct Lake semantic models, and an operational layer of config tables, run logging and a threshold-based data-quality framework. Then retired the legacy reports into governed gold models: unified time entries across ERP and field-ops systems with timecard-lateness analytics, and sales commissions.</dd>
+            <dt>Solved</dt><dd>PostgreSQL WAL conflicts on the read replica (retries, chunked loads), unscaled numerics breaking Spark casts (dynamic precision), and Fabric's own constraints: no nested procs, no ALTER TABLE, DirectQuery and Direct Lake limits.</dd>
+            <dt>Outcome</dt><dd class="outcome">Production platform in a few months, plus a multi-session Fabric and Power BI training program delivered to the 8-to-10-person IT team.</dd>
           </dl>
         </div>
       </article>
 
-      <article class="project placeholder">
-        <div class="meta">2025 · Client project<span class="stack">Azure Data Factory · SQL · Power BI</span></div>
+      <article class="project">
+        <div class="meta">2021 – 2026 · Fairgrove Property Management, USA<span class="stack">Azure Functions · ADLS · Data Factory · Azure SQL · Power BI · Power Automate</span></div>
         <div>
-          <h3>Project title goes here</h3>
+          <h3>Property and finance pipeline from AppFolio, end to end</h3>
           <dl>
-            <dt>Problem</dt><dd>One or two sentences on what was broken or missing.</dd>
-            <dt>Built</dt><dd>What you designed and shipped, in plain terms.</dd>
-            <dt>Outcome</dt><dd class="outcome">A number.</dd>
+            <dt>Problem</dt><dd>A real-estate firm with property, finance and payroll data spread across AppFolio, Paylocity and SharePoint, and no single owner of its reporting.</dd>
+            <dt>Built</dt><dd>Sole analytics lead for four years. AppFolio APIs pulled by Azure Functions into ADLS, transformed with Data Factory, loaded to Azure SQL, served in Power BI. Automated PDF generation for tenant and client updates.</dd>
+            <dt>Outcome</dt><dd class="outcome">Owned the firm's reporting data estate: stood up the pipelines and delivered Power BI reporting across operations, finance and leadership.</dd>
           </dl>
         </div>
       </article>
 
-      <article class="project placeholder">
-        <div class="meta">2026 · Personal build<span class="stack">Fabric Lakehouse · Purview</span></div>
+      <article class="project">
+        <div class="meta">2020 – present · asp-int<span class="stack">TalentLMS API · Azure Functions · Azure SQL · Data Factory · Power BI</span></div>
         <div>
-          <h3>Governed lakehouse on Fabric with Purview</h3>
+          <h3>Analytics foundation for a growing edtech business</h3>
           <dl>
-            <dt>Problem</dt><dd>Most Fabric demos stop at the gold layer. I wanted a platform where lineage, classification and sensitivity labels are part of the build, not an afterthought.</dd>
-            <dt>Built</dt><dd>Medallion lakehouse on public data, scanned and cataloged in Purview, with sensitivity labels flowing through to the Power BI semantic model.</dd>
-            <dt>Outcome</dt><dd class="outcome">Write-up and repo coming soon.</dd>
+            <dt>Problem</dt><dd>One of the first four employees. Reporting was manual, error-prone and already causing client-facing mistakes.</dd>
+            <dt>Built</dt><dd>End-to-end flows from TalentLMS, QuickBooks, HubSpot and Google Sheets into Azure SQL and Power BI, with monitoring and fallback logic for failed refreshes. Later rebuilt on Fabric: API to notebooks to bronze and silver Delta tables to Direct Lake models.</dd>
+            <dt>Outcome</dt><dd class="outcome">Owned the reporting data estate end to end: pipelines, the SQL layer and Power BI reports for operations, finance, sales and client delivery.</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="meta">2022 – 2024 · GroupM<span class="stack">Power BI · Excel · Power Automate</span></div>
+        <div>
+          <h3>Global workforce analytics for 40,000 people</h3>
+          <dl>
+            <dt>Problem</dt><dd>The Global HR Director needed headcount, attrition and diversity reporting across regions from people data that arrived in every shape imaginable.</dd>
+            <dt>Built</dt><dd>Collection, aggregation and Power BI dashboards for a 40,000-person workforce, with Power Automate and macros to speed the monthly cycle.</dd>
+            <dt>Outcome</dt><dd class="outcome">Faster monthly executive reporting and first-hand exposure to enterprise data governance in a global matrix organisation.</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="meta">Demos &amp; side projects<span class="stack">Fabric · SQL Database · REST APIs · GitHub Actions</span></div>
+        <div>
+          <h3>Smaller builds worth a look</h3>
+          <dl>
+            <dt>Write-back</dt><dd><a href="https://www.linkedin.com/posts/activity-7414215575293472768-6XGL">From read-only to write-back</a>: a native Power BI write-back into a Fabric SQL database using Translytical Task Flows, prompted by a hotel client who wanted to act from inside the report.</dd>
+            <dt>FinOps</dt><dd><a href="https://github.com/BanuVinay1/fabric_capacity_controller">Fabric Capacity Controller</a>: a stateless scheduler built on the Fabric Capacity REST API, Bash and GitHub Actions that pauses and resumes capacity around workload windows, after I burnt my own Azure bill leaving one running.</dd>
+            <dt>Research</dt><dd>Architecture and live demo of Fabric Data Agents, conversational BI and Real-Time Intelligence (EventStream to EventHouse) for a US client, including the governance implications.</dd>
           </dl>
         </div>
       </article>
@@ -248,48 +270,50 @@
     <section id="skills">
       <div class="section-head">
         <h2>Skills</h2>
-        <p class="intro">Grouped by where they sit in the platform. Items marked as learning are in progress and honest about it.</p>
+        <p class="intro">Grouped by where they sit in the platform.</p>
       </div>
       <div class="skills">
         <div>
           <h3>Microsoft Fabric</h3>
           <ul>
-            <li>Lakehouse and Delta tables</li>
-            <li>Data pipelines</li>
-            <li>Dataflows Gen2</li>
+            <li>Lakehouse, Warehouse, Delta tables</li>
+            <li>Data Factory pipelines, metadata-driven</li>
             <li>Spark notebooks (PySpark)</li>
-            <li>Warehouse and T-SQL</li>
-            <li>Medallion architecture</li>
+            <li>Semantic models: DirectQuery, Direct Lake</li>
+            <li>EventStream, EventHouse, KQL</li>
+            <li>Translytical Task Flows, Data Agents</li>
+            <li>Capacity and cost automation</li>
           </ul>
         </div>
         <div>
-          <h3>Azure</h3>
+          <h3>Azure and platform</h3>
           <ul>
-            <li>Data Factory</li>
-            <li>Azure SQL and Storage</li>
-            <li>Virtual machines and networking</li>
-            <li>Resource setup and cost control</li>
+            <li>Data Factory, Synapse, Databricks</li>
+            <li>Azure SQL, ADLS, Functions</li>
+            <li>Azure DevOps CI/CD, GitHub Actions</li>
+            <li>Landing-zone and IaC patterns</li>
             <li>Entra ID and access management</li>
+            <li>PostgreSQL, REST APIs, Delta Sharing</li>
           </ul>
         </div>
         <div>
-          <h3>Analytics</h3>
+          <h3>Analytics and training</h3>
           <ul>
-            <li>Power BI and DAX</li>
-            <li>Semantic model design</li>
-            <li>SQL</li>
-            <li>Python for data work</li>
-            <li>LMS and CRM analytics</li>
+            <li>Power BI, DAX, T-SQL</li>
+            <li>Star schema and semantic model design</li>
+            <li>Python, Power Platform</li>
+            <li>Hands-on Fabric and Power BI training</li>
+            <li>Trainer guides for mixed-skill teams</li>
           </ul>
         </div>
         <div>
           <h3>Governance and security</h3>
           <ul>
-            <li>Microsoft Purview data catalog</li>
-            <li class="next">Lineage and classification</li>
-            <li class="next">Sensitivity labels and DLP</li>
+            <li>Microsoft Purview in platform architecture</li>
+            <li>Lineage and classification at scale</li>
+            <li>Sensitivity labels and DLP</li>
             <li>Information protection (SC-401)</li>
-            <li>Fabric workspace security</li>
+            <li>Workspace security, data-quality frameworks</li>
           </ul>
         </div>
       </div>
@@ -312,9 +336,10 @@
       <div class="section-head">
         <h2>About</h2>
         <div>
-          <p>I started as a data analyst, building reports and answering questions for business teams. Over time the harder problems moved upstream: the data was late, duplicated, or impossible to trust, so I moved upstream with it and became the person who builds the pipelines.</p>
-          <p>Today I work on Microsoft Fabric and Azure, and I'm deliberately adding Purview to that so I can own both halves of the job: getting data to people, and making sure it's the right data. I've delivered 50+ projects for small and mid-size businesses, mostly on Upwork, alongside my engineering work.</p>
-          <p>I'm based in Bengaluru and open to full-time roles and selected freelance work.</p>
+          <p>I started as a data analyst, building reports and answering questions for business teams. The harder problems kept moving upstream: data that was late, duplicated or impossible to trust. So I moved upstream with it and became the person who builds the platform.</p>
+          <p>Today my sweet spot is end-to-end Microsoft Fabric: ingestion pipelines, medallion lakehouses, star-schema warehouses, semantic models and Power BI delivery, with Azure DevOps for CI/CD and Purview for governance. I also train the teams who inherit what I build, from business users writing their first measure to IT leads adopting Fabric practices.</p>
+          <p>Independently, I'm a Top Rated Plus freelancer on <a href="https://www.upwork.com/freelancers/~01a703364d6f452d97">Upwork</a> with 50+ projects, a 100% job success score and over $200K earned, mostly as a long-term partner rather than a one-off hire. Master's in Management (PSG Institute of Management), BSc Computer Science.</p>
+          <p>Based in Bengaluru. Open to full-time Fabric and data-platform roles, and to selected consulting and training engagements.</p>
         </div>
       </div>
     </section>
@@ -328,6 +353,7 @@
             <li><a href="mailto:banu@virtualbuddy.in">banu@virtualbuddy.in</a></li>
             <li><a href="https://www.linkedin.com/in/banu-vinay-a59703123/">LinkedIn</a></li>
             <li><a href="https://github.com/BanuVinay1">GitHub</a></li>
+            <li><a href="https://www.upwork.com/freelancers/~01a703364d6f452d97">Upwork</a></li>
           </ul>
         </div>
       </div>
