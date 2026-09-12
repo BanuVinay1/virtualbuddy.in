@@ -92,6 +92,13 @@
   .project .outcome { color: var(--brass); font-weight: 500; }
   @media (max-width: 720px) { .project { grid-template-columns: 1fr; gap: 12px; } }
 
+  /* Feedback */
+  .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; margin-top: 40px; }
+  .quotes blockquote { margin: 0; padding: 22px 24px; background: var(--paper-deep); border-left: 3px solid var(--brass); }
+  .quotes blockquote p { font-family: "IBM Plex Serif", serif; font-style: italic; font-size: 17px; margin: 0 0 14px; }
+  .quotes footer { border: 0; padding: 0; font-size: 14px; color: var(--ink-soft); }
+  .quotes footer span { color: var(--mist); }
+
   /* Skills */
   .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 40px 32px; margin-top: 40px; }
   .skills h3 { font-size: 19px; margin-bottom: 12px; }
@@ -121,6 +128,7 @@
     <nav aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#skills">Skills</a>
+      <a href="#feedback">Feedback</a>
       <a href="#certs">Certifications</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -206,7 +214,7 @@
       </div>
 
       <article class="project">
-        <div class="meta">2026 – present · ORR Protection, USA<span class="stack">Fabric F16 · Lakehouse · Warehouse · Pipelines · PySpark · T-SQL · Power BI</span></div>
+        <div class="meta">2026 – present · Fire protection company, USA<span class="stack">Fabric F16 · Lakehouse · Warehouse · Pipelines · PySpark · T-SQL · Power BI</span></div>
         <div>
           <h3>Enterprise data platform on Microsoft Fabric, built from zero</h3>
           <dl>
@@ -231,11 +239,11 @@
       </article>
 
       <article class="project">
-        <div class="meta">2020 – present · asp-int<span class="stack">TalentLMS API · Azure Functions · Azure SQL · Data Factory · Power BI</span></div>
+        <div class="meta">2020 – 2026 · Automation Strategy &amp; Performance, USA<span class="stack">TalentLMS API · Azure Functions · Azure SQL · Data Factory · Power BI</span></div>
         <div>
           <h3>Analytics foundation for a growing edtech business</h3>
           <dl>
-            <dt>Problem</dt><dd>One of the first four employees. Reporting was manual, error-prone and already causing client-facing mistakes.</dd>
+            <dt>Problem</dt><dd>Joined as one of the first four employees and stayed nearly six years. Reporting was manual, error-prone and already causing client-facing mistakes.</dd>
             <dt>Built</dt><dd>End-to-end flows from TalentLMS, QuickBooks, HubSpot and Google Sheets into Azure SQL and Power BI, with monitoring and fallback logic for failed refreshes. Later rebuilt on Fabric: API to notebooks to bronze and silver Delta tables to Direct Lake models.</dd>
             <dt>Outcome</dt><dd class="outcome">Owned the reporting data estate end to end: pipelines, the SQL layer and Power BI reports for operations, finance, sales and client delivery.</dd>
           </dl>
@@ -243,7 +251,7 @@
       </article>
 
       <article class="project">
-        <div class="meta">2022 – 2024 · GroupM<span class="stack">Power BI · Excel · Power Automate</span></div>
+        <div class="meta">2022 – 2024 · GroupM, USA<span class="stack">Power BI · Excel · Power Automate</span></div>
         <div>
           <h3>Global workforce analytics for 40,000 people</h3>
           <dl>
@@ -265,6 +273,31 @@
           </dl>
         </div>
       </article>
+    </section>
+
+    <section id="feedback">
+      <div class="section-head">
+        <h2>Feedback</h2>
+        <p class="intro">From client reviews on Upwork. Full history on <a href="https://www.upwork.com/freelancers/~01a703364d6f452d97">my profile</a>.</p>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>A dedicated and reliable Azure DevOps and Fabric Data Engineer who consistently delivered high-quality work. She learns quickly, communicates clearly, and approaches every task with a strong work ethic. I would be happy to work with her again.</p>
+          <footer>Fabric platform build <span>· 5.0 · 2026</span></footer>
+        </blockquote>
+        <blockquote>
+          <p>A true professional. Very trustworthy, with exceptional problem solving skills. Her profile does not tell her whole story. Very knowledgeable in cybersecurity, networking, Microsoft Azure and IT services.</p>
+          <footer>Azure build-up service <span>· 5.0 · 2025</span></footer>
+        </blockquote>
+        <blockquote>
+          <p>I highly recommend Banu as a Power BI and Power Query analyst. Good technical skills, professionalism, and a strong commitment to delivering outstanding results.</p>
+          <footer>HR data analytics and process <span>· 2023–24</span></footer>
+        </blockquote>
+        <blockquote>
+          <p>Attentive to details, knowledgeable, able to deliver on time, very responsive.</p>
+          <footer>Power BI and Python financial dashboard <span>· 5.0 · 2021</span></footer>
+        </blockquote>
+      </div>
     </section>
 
     <section id="skills">
