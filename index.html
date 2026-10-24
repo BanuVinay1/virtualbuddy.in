@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Banu Vinay – Fabric Data Engineer & Trainer</title>
-<meta name="description" content="Banu Vinay is a Microsoft Fabric data engineer and trainer in Bengaluru. End-to-end Fabric platforms: metadata-driven ingestion, medallion lakehouses, star-schema warehouses, semantic models and Power BI, with Purview for governance.">
+<meta name="description" content="Banu Vinay is a Microsoft Fabric data engineer and trainer in Bengaluru. End-to-end Fabric platforms: metadata-driven ingestion, medallion lakehouses, star-schema warehouses, semantic models and Power BI, with Microsoft Purview for governance. Weekly Purview videos recorded in a real lab tenant.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -92,6 +92,15 @@
   .project .outcome { color: var(--brass); font-weight: 500; }
   @media (max-width: 720px) { .project { grid-template-columns: 1fr; gap: 12px; } }
 
+  /* Videos */
+  .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; margin-top: 40px; }
+  .video { text-decoration: none; display: block; }
+  .video img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 3px; background: var(--paper-deep); }
+  .video h3 { font-size: 18px; margin-top: 12px; }
+  .video:hover h3 { color: var(--brass); }
+  .video p { font-size: 15px; color: var(--ink-soft); margin: 6px 0 0; }
+  .videos-more { margin-top: 28px; }
+
   /* Feedback */
   .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; margin-top: 40px; }
   .quotes blockquote { margin: 0; padding: 22px 24px; background: var(--paper-deep); border-left: 3px solid var(--brass); }
@@ -127,6 +136,7 @@
     <a class="brand" href="#top">Banu Vinay <span>/ virtualbuddy.in</span></a>
     <nav aria-label="Sections">
       <a href="#work">Work</a>
+      <a href="#videos">Videos</a>
       <a href="#skills">Skills</a>
       <a href="#feedback">Feedback</a>
       <a href="#certs">Certifications</a>
@@ -139,10 +149,10 @@
     <div class="hero">
       <p class="kicker">Fabric Data Engineer &amp; Trainer, Bengaluru</p>
       <h1>I build lakehouses and pipelines on Microsoft Fabric, and the governance that keeps them trustworthy.</h1>
-      <p class="lede">Data analyst by origin, data engineer by practice. I build end-to-end Fabric platforms: metadata-driven ingestion, medallion lakehouses, star-schema warehouses, semantic models and the Power BI on top. I train the teams who inherit them, and I'm bringing Microsoft Purview into every build so the data stays cataloged, classified and traceable.</p>
+      <p class="lede">Data analyst by origin, data engineer by practice. I build end-to-end Fabric platforms: metadata-driven ingestion, medallion lakehouses, star-schema warehouses, semantic models and the Power BI on top. I train the teams who inherit them, and I bring Microsoft Purview into every build so the data stays labeled, encrypted and traceable. Every week I record what Purview actually does to Fabric data, errors included, on <a href="https://www.youtube.com/@banupurview">my YouTube channel</a>.</p>
       <div class="cta">
         <a class="btn primary" href="#work">See my work</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#videos">Watch the videos</a>
       </div>
 
       <figure class="pipeline">
@@ -218,7 +228,7 @@
         <div>
           <h3>Enterprise data platform on Microsoft Fabric, built from zero</h3>
           <dl>
-            <dt>Problem</dt><dd>A fire-protection company with data spread across an Odoo ERP, Salesforce, Procore, InspectPoint, ADP and SharePoint, an IT team new to Fabric, and reporting that lived in one-off dataflows nobody could maintain.</dd>
+            <dt>Problem</dt><dd>A fire-protection company with data spread across an Odoo ERP, Salesforce, Procore, InspectPoint, ADP and SharePoint, an IT team new to Fabric, and reporting built in one-off dataflows that were hard to maintain and extend.</dd>
             <dt>Built</dt><dd>Sole data engineer embedded with IT leadership. Config-driven, metadata-driven ingestion into a medallion lakehouse (six source systems; PostgreSQL read replicas, the Salesforce connector, Delta Sharing, REST APIs and file drops), incremental loads with watermarks and MERGE patterns, a gold-layer star schema in a Fabric Warehouse refreshed by stored procedures, DirectQuery and Direct Lake semantic models, and an operational layer of config tables, run logging and a threshold-based data-quality framework. Then retired the legacy reports into governed gold models: unified time entries across ERP and field-ops systems with timecard-lateness analytics, and sales commissions.</dd>
             <dt>Solved</dt><dd>PostgreSQL WAL conflicts on the read replica (retries, chunked loads), unscaled numerics breaking Spark casts (dynamic precision), and Fabric's own constraints: no nested procs, no ALTER TABLE, DirectQuery and Direct Lake limits.</dd>
             <dt>Outcome</dt><dd class="outcome">Production platform in a few months, plus a multi-session Fabric and Power BI training program delivered to the 8-to-10-person IT team.</dd>
@@ -232,7 +242,7 @@
           <h3>Property and finance pipeline from AppFolio, end to end</h3>
           <dl>
             <dt>Problem</dt><dd>A real-estate firm with property, finance and payroll data spread across AppFolio, Paylocity and SharePoint, and no single owner of its reporting.</dd>
-            <dt>Built</dt><dd>Sole analytics lead for four years. AppFolio APIs pulled by Azure Functions into ADLS, transformed with Data Factory, loaded to Azure SQL, served in Power BI. Automated PDF generation for tenant and client updates.</dd>
+            <dt>Built</dt><dd>Sole analytics lead for over four years. AppFolio APIs pulled by Azure Functions into ADLS, transformed with Data Factory, loaded to Azure SQL, served in Power BI. Automated PDF generation for tenant and client updates.</dd>
             <dt>Outcome</dt><dd class="outcome">Owned the firm's reporting data estate: stood up the pipelines and delivered Power BI reporting across operations, finance and leadership.</dd>
           </dl>
         </div>
@@ -243,8 +253,8 @@
         <div>
           <h3>Analytics foundation for a growing edtech business</h3>
           <dl>
-            <dt>Problem</dt><dd>Joined as one of the first four employees and stayed nearly six years. Reporting was manual, error-prone and already causing client-facing mistakes.</dd>
-            <dt>Built</dt><dd>End-to-end flows from TalentLMS, QuickBooks, HubSpot and Google Sheets into Azure SQL and Power BI, with monitoring and fallback logic for failed refreshes. Later rebuilt on Fabric: API to notebooks to bronze and silver Delta tables to Direct Lake models.</dd>
+            <dt>Problem</dt><dd>Reporting was manual, error-prone and already causing client-facing mistakes.</dd>
+            <dt>Built</dt><dd>One of the first four employees, there for nearly six years. End-to-end flows from TalentLMS, QuickBooks, HubSpot and Google Sheets into Azure SQL and Power BI, with monitoring and fallback logic for failed refreshes. Later rebuilt on Fabric: API to notebooks to bronze and silver Delta tables to Direct Lake models.</dd>
             <dt>Outcome</dt><dd class="outcome">Owned the reporting data estate end to end: pipelines, the SQL layer and Power BI reports for operations, finance, sales and client delivery.</dd>
           </dl>
         </div>
@@ -269,10 +279,32 @@
           <dl>
             <dt>Write-back</dt><dd><a href="https://www.linkedin.com/posts/activity-7414215575293472768-6XGL">From read-only to write-back</a>: a native Power BI write-back into a Fabric SQL database using Translytical Task Flows, prompted by a hotel client who wanted to act from inside the report.</dd>
             <dt>FinOps</dt><dd><a href="https://github.com/BanuVinay1/fabric_capacity_controller">Fabric Capacity Controller</a>: a stateless scheduler built on the Fabric Capacity REST API, Bash and GitHub Actions that pauses and resumes capacity around workload windows, after I burnt my own Azure bill leaving one running.</dd>
+            <dt>Purview lab</dt><dd><a href="https://github.com/BanuVinay1/purview-fabric-lab">purview-fabric-lab</a>: the companion repo to the channel. Per-video README with results tables, the exact settings used and a checklist to repeat the test in your own tenant.</dd>
             <dt>Research</dt><dd>Architecture and live demo of Fabric Data Agents, conversational BI and Real-Time Intelligence (EventStream to EventHouse) for a US client, including the governance implications.</dd>
           </dl>
         </div>
       </article>
+    </section>
+
+    <section id="videos">
+      <div class="section-head">
+        <h2>Videos</h2>
+        <p class="intro"><a href="https://www.youtube.com/@banupurview">Banu · Purview for Data Engineers</a> on YouTube. Microsoft Purview shown the way it behaves in a real tenant: labels, encryption, DLP and what happens when data moves through Fabric. New video every week, recorded live in my lab (a fictional company, Harborline Freight, no real data).</p>
+      </div>
+      <div class="videos">
+        <a class="video" href="https://www.youtube.com/watch?v=mhkv-yFAmfY">
+          <img src="https://img.youtube.com/vi/mhkv-yFAmfY/hqdefault.jpg" alt="" loading="lazy">
+          <h3>5 ways to export from Fabric. 2 of them drop the encryption.</h3>
+          <p>Excel, PDF and PowerPoint keep the label. CSV and Print don't. The two tenant settings that close the gap.</p>
+        </a>
+        <a class="video" href="https://youtu.be/DZ6hBQrp0Yo">
+          <img src="https://img.youtube.com/vi/DZ6hBQrp0Yo/hqdefault.jpg" alt="" loading="lazy">
+          <h3>Stop workspace users reading confidential data in Fabric</h3>
+          <p>A label alone blocks nobody inside Fabric. A Purview protection policy makes it control access, whatever the workspace role.</p>
+        </a>
+        <!-- ADD MORE: copy a block above, swap the video ID in both the href and the img src, and the title/one-liner. -->
+      </div>
+      <p class="videos-more"><a href="https://www.youtube.com/@banupurview/videos">All videos on YouTube →</a> Each one has a matching write-up and test checklist in the <a href="https://github.com/BanuVinay1/purview-fabric-lab">purview-fabric-lab</a> repo.</p>
     </section>
 
     <section id="feedback">
@@ -342,9 +374,10 @@
         <div>
           <h3>Governance and security</h3>
           <ul>
-            <li>Microsoft Purview in platform architecture</li>
-            <li>Lineage and classification at scale</li>
-            <li>Sensitivity labels and DLP</li>
+            <li>Microsoft Purview: Data Map, Unified Catalog</li>
+            <li>Sensitivity labels and encryption on Fabric items</li>
+            <li>Purview protection policies for Fabric</li>
+            <li>DLP, Content explorer, audit</li>
             <li>Information protection (SC-401)</li>
             <li>Workspace security, data-quality frameworks</li>
           </ul>
@@ -370,7 +403,7 @@
         <h2>About</h2>
         <div>
           <p>I started as a data analyst, building reports and answering questions for business teams. The harder problems kept moving upstream: data that was late, duplicated or impossible to trust. So I moved upstream with it and became the person who builds the platform.</p>
-          <p>Today my sweet spot is end-to-end Microsoft Fabric: ingestion pipelines, medallion lakehouses, star-schema warehouses, semantic models and Power BI delivery, with Azure DevOps for CI/CD and Purview for governance. I also train the teams who inherit what I build, from business users writing their first measure to IT leads adopting Fabric practices.</p>
+          <p>Today my sweet spot is end-to-end Microsoft Fabric: ingestion pipelines, medallion lakehouses, star-schema warehouses, semantic models and Power BI delivery, with Azure DevOps for CI/CD and Purview for governance. I also train the teams who inherit what I build, from business users writing their first measure to IT leads adopting Fabric practices, and I teach Purview publicly every week on <a href="https://www.youtube.com/@banupurview">YouTube</a>, recorded live in my own lab tenant.</p>
           <p>Independently, I'm a Top Rated Plus freelancer on <a href="https://www.upwork.com/freelancers/~01a703364d6f452d97">Upwork</a> with 50+ projects, a 100% job success score and over $200K earned, mostly as a long-term partner rather than a one-off hire. Master's in Management (PSG Institute of Management), BSc Computer Science.</p>
           <p>Based in Bengaluru. Open to full-time Fabric and data-platform roles, and to selected consulting and training engagements.</p>
         </div>
@@ -387,6 +420,7 @@
             <li><a href="https://www.linkedin.com/in/banu-vinay-a59703123/">LinkedIn</a></li>
             <li><a href="https://github.com/BanuVinay1">GitHub</a></li>
             <li><a href="https://www.upwork.com/freelancers/~01a703364d6f452d97">Upwork</a></li>
+            <li><a href="https://www.youtube.com/@banupurview">YouTube</a></li>
           </ul>
         </div>
       </div>
