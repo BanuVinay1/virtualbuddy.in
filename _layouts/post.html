@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<main>
+  <article class="post">
+    <div class="post-head">
+      <p class="kicker"><a href="{{ '/blog/' | relative_url }}">Writing</a> · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>{% if page.tags.size > 0 %} · {{ page.tags | join: ", " }}{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+    </div>
+    <div class="post-body">
+      {{ content }}
+    </div>
+    <div class="post-foot">
+      {% if page.video %}<p>Watch it happen: <a href="{{ page.video }}">the video on YouTube</a>.</p>{% endif %}
+      {% if page.repo %}<p>Settings, scripts and checklist: <a href="{{ page.repo }}">the lab repo</a>.</p>{% endif %}
+      <p>Questions or corrections: <a href="https://www.linkedin.com/in/banu-vinay-a59703123/">LinkedIn</a> or <a href="mailto:banu@virtualbuddy.in">banu@virtualbuddy.in</a>.</p>
+    </div>
+  </article>
+</main>

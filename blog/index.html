@@ -1,0 +1,25 @@
+---
+layout: default
+title: Writing
+description: Short, tested write-ups on Microsoft Fabric and Purview. Each one has a claim, the proof from my lab tenant, and a fix you can copy.
+permalink: /blog/
+---
+<main>
+  <section id="writing" style="border-top:0">
+    <div class="section-head">
+      <h2>Writing</h2>
+      <p class="intro">Short, tested write-ups on Microsoft Fabric and Purview. Each one starts with a claim, shows the proof from my lab tenant, and ends with a fix you can copy and a checklist to repeat the test yourself. Most pair with a <a href="https://www.youtube.com/@banupurview">video</a>.</p>
+    </div>
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+        <div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.description }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>
