@@ -1,0 +1,32 @@
+title: Banu Vinay
+description: Fabric Data Engineer and Trainer. Microsoft Fabric, Azure and Purview, with weekly Purview videos recorded in a real lab tenant.
+url: https://virtualbuddy.in
+author: Banu Vinay
+lang: en
+
+permalink: /blog/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

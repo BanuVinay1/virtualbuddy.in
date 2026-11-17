@@ -1,149 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Banu Vinay – Fabric Data Engineer & Trainer</title>
-<meta name="description" content="Banu Vinay is a Microsoft Fabric data engineer and trainer in Bengaluru. End-to-end Fabric platforms: metadata-driven ingestion, medallion lakehouses, star-schema warehouses, semantic models and Power BI, with Microsoft Purview for governance. Weekly Purview videos recorded in a real lab tenant.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #F4F6F3;
-    --paper-deep: #E8ECE6;
-    --ink: #14322B;
-    --ink-soft: #3F5C54;
-    --mist: #8B9C96;
-    --rule: #CFD8D3;
-    --brass: #B07A1E;
-    --brass-soft: #E9D7B3;
-    --bronze: #9C6B3F;
-    --silver: #8E9AA3;
-    --gold: #C99A2E;
-    --measure: 68ch;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "IBM Plex Sans", system-ui, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-  a:hover { color: var(--brass); }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
-  h1, h2, h3 { font-family: "IBM Plex Serif", Georgia, serif; font-weight: 500; line-height: 1.15; margin: 0; }
-  p { margin: 0 0 1em; max-width: var(--measure); }
+---
+layout: default
+title: Banu Vinay – Fabric Data Engineer & Trainer
+description: Banu Vinay is a Microsoft Fabric data engineer and trainer in Bengaluru. End-to-end Fabric platforms: metadata-driven ingestion, medallion lakehouses, star-schema warehouses, semantic models and Power BI, with Microsoft Purview for governance. Weekly Purview videos recorded in a real lab tenant.
+---
 
-  .wrap { width: min(1040px, 92vw); margin: 0 auto; }
-
-  /* Header */
-  header {
-    display: flex; align-items: center; justify-content: space-between; gap: 24px;
-    padding: 28px 0 0;
-  }
-  .brand { font-family: "IBM Plex Serif", serif; font-size: 20px; text-decoration: none; }
-  .brand span { color: var(--mist); }
-  nav a { text-decoration: none; margin-left: 22px; font-size: 15px; color: var(--ink-soft); }
-  nav a:hover { color: var(--brass); }
-
-  /* Hero */
-  .hero { padding: 84px 0 56px; }
-  .hero .kicker { color: var(--ink-soft); font-size: 17px; margin-bottom: 18px; }
-  .hero h1 { font-size: clamp(34px, 5.2vw, 58px); max-width: 20ch; letter-spacing: -0.01em; }
-  .hero .lede { font-size: 19px; color: var(--ink-soft); margin-top: 22px; }
-  .cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
-  .btn {
-    display: inline-block; padding: 11px 18px; border-radius: 3px; text-decoration: none;
-    font-size: 15px; font-weight: 500; border: 1px solid var(--ink);
-  }
-  .btn.primary { background: var(--ink); color: var(--paper); }
-  .btn.primary:hover { background: var(--brass); border-color: var(--brass); color: #fff; }
-  .btn.ghost:hover { border-color: var(--brass); color: var(--brass); }
-
-  /* Pipeline strip */
-  .pipeline { margin: 64px 0 0; }
-  .pipeline svg { width: 100%; height: auto; display: block; }
-  .pipeline figcaption { font-size: 14px; color: var(--mist); margin-top: 12px; max-width: var(--measure); }
-
-  /* Sections */
-  section { padding: 72px 0; border-top: 1px solid var(--rule); }
-  .section-head { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; }
-  .section-head h2 { font-size: 28px; }
-  .section-head .intro { color: var(--ink-soft); }
-  @media (max-width: 720px) { .section-head { grid-template-columns: 1fr; gap: 12px; } }
-
-  /* Work */
-  .project { display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 34px 0; border-top: 1px solid var(--rule); }
-  .project:first-of-type { margin-top: 40px; }
-  .project dd a { color: var(--ink); }
-  .project .meta { color: var(--mist); font-size: 15px; line-height: 1.5; }
-  .project .meta .stack { color: var(--ink-soft); display: block; margin-top: 6px; }
-  .project h3 { font-size: 22px; margin-bottom: 10px; }
-  .project dl { display: grid; grid-template-columns: 90px 1fr; gap: 6px 16px; margin: 0; max-width: var(--measure); }
-  .project dt { color: var(--mist); font-size: 15px; }
-  .project dd { margin: 0; }
-  .project .outcome { color: var(--brass); font-weight: 500; }
-  @media (max-width: 720px) { .project { grid-template-columns: 1fr; gap: 12px; } }
-
-  /* Videos */
-  .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; margin-top: 40px; }
-  .video { text-decoration: none; display: block; }
-  .video img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 3px; background: var(--paper-deep); }
-  .video h3 { font-size: 18px; margin-top: 12px; }
-  .video:hover h3 { color: var(--brass); }
-  .video p { font-size: 15px; color: var(--ink-soft); margin: 6px 0 0; }
-  .videos-more { margin-top: 28px; }
-
-  /* Feedback */
-  .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; margin-top: 40px; }
-  .quotes blockquote { margin: 0; padding: 22px 24px; background: var(--paper-deep); border-left: 3px solid var(--brass); }
-  .quotes blockquote p { font-family: "IBM Plex Serif", serif; font-style: italic; font-size: 17px; margin: 0 0 14px; }
-  .quotes footer { border: 0; padding: 0; font-size: 14px; color: var(--ink-soft); }
-  .quotes footer span { color: var(--mist); }
-
-  /* Skills */
-  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 40px 32px; margin-top: 40px; }
-  .skills h3 { font-size: 19px; margin-bottom: 12px; }
-  .skills ul { list-style: none; padding: 0; margin: 0; }
-  .skills li { padding: 5px 0; border-bottom: 1px solid var(--rule); font-size: 16px; }
-
-  /* Certs */
-  .certs { list-style: none; padding: 0; margin: 40px 0 0; max-width: 720px; }
-  .certs li { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
-  .certs .code { color: var(--brass); font-weight: 500; margin-right: 10px; }
-  .certs .date { color: var(--mist); font-size: 15px; white-space: nowrap; }
-  @media (max-width: 520px) { .certs li { grid-template-columns: 1fr; gap: 2px; } }
-
-  /* About / contact */
-  .about p { font-size: 18px; }
-  .contact-list { list-style: none; padding: 0; margin: 28px 0 0; font-size: 18px; }
-  .contact-list li { padding: 6px 0; }
-
-  footer { padding: 40px 0 56px; color: var(--mist); font-size: 14px; border-top: 1px solid var(--rule); }
-</style>
-</head>
-<body>
-<div class="wrap">
-
-  <header>
-    <a class="brand" href="#top">Banu Vinay <span>/ virtualbuddy.in</span></a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#videos">Videos</a>
-      <a href="#skills">Skills</a>
-      <a href="#feedback">Feedback</a>
-      <a href="#certs">Certifications</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
   <main id="top">
     <div class="hero">
@@ -286,6 +146,25 @@
       </article>
     </section>
 
+    <section id="writing">
+      <div class="section-head">
+        <h2>Writing</h2>
+        <p class="intro">Short, tested write-ups on Fabric and Purview: a claim, the proof from my lab, and a fix you can copy.</p>
+      </div>
+      <ul class="post-list">
+        {% for post in site.posts limit:3 %}
+        <li>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+          <div>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.description }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="writing-more"><a href="{{ '/blog/' | relative_url }}">All posts →</a></p>
+    </section>
+
     <section id="videos">
       <div class="section-head">
         <h2>Videos</h2>
@@ -426,12 +305,3 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    Banu Vinay · virtualbuddy.in · Built by hand, hosted on GitHub Pages.
-  </footer>
-
-</div>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4dbf9c0c4d3949a3b57b834fa6187498"}'></script><!-- End Cloudflare Web Analytics -->
-</body>
-</html>
